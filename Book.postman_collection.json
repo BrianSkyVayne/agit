@@ -1,0 +1,589 @@
+{
+	"info": {
+		"_postman_id": "bf6c3b70-7b93-4adf-a695-a75c3efd2fc2",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create buku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"judul\": \"Harry Potter dan Batu Bertuah\",\r\n    \"pengarang\": \"J.K Rowling\",\r\n    \"penerbit\": \"Gramedia\",\r\n    \"tanggalTerbit\": \"1997-06-29\",\r\n    \"tebalBuku\": 384,\r\n    \"status\": 0,\r\n    \"peminjam\": \"-\",\r\n    \"tanggalPinjam\": \"-\",\r\n    \"tanggalKembali\": \"-\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{agitUrl}}/create_book",
+					"host": [
+						"{{local}}{{agitUrl}}"
+					],
+					"path": [
+						"create_book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"judul\": \"Harry Potter dan Batu Bertuah\",\r\n    \"pengarang\": \"J.K Rowling\",\r\n    \"penerbit\": \"Gramedia\",\r\n    \"tanggalTerbit\": \"1997-06-29\",\r\n    \"tebalBuku\": 384,\r\n    \"status\": 0,\r\n    \"peminjam\": \"-\",\r\n    \"tanggalPinjam\": \"-\",\r\n    \"tanggalKembali\": \"-\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/create_book",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"create_book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 14:25:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": \"book uploaded successfully!!\",\n    \"statusCode\": \"OK\",\n    \"statusCodeValue\": 200\n}"
+				},
+				{
+					"name": "DUPLICATE BUKU",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"judul\": \"Harry Potter dan Batu Bertuah\",\r\n    \"pengarang\": \"J.K Rowling\",\r\n    \"penerbit\": \"Gramedia\",\r\n    \"tanggalTerbit\": \"1997-06-29\",\r\n    \"tebalBuku\": 384,\r\n    \"status\": 0,\r\n    \"peminjam\": \"-\",\r\n    \"tanggalPinjam\": \"-\",\r\n    \"tanggalKembali\": \"-\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/create_book",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"create_book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 14:27:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": null,\n    \"statusCode\": \"BAD_REQUEST\",\n    \"statusCodeValue\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "ALL DAFTAR BUKU",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "null",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{agitUrl}}/get_all_daftar_buku",
+					"host": [
+						"{{local}}{{agitUrl}}"
+					],
+					"path": [
+						"get_all_daftar_buku"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "0",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/get_all_daftar_buku",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"get_all_daftar_buku"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 14:41:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"idBuku\": \"A0001\",\n        \"judul\": \"Harry Potter dan Batu Bertuah\",\n        \"pengarang\": \"J.K Rowling\",\n        \"penerbit\": \"Gramedia\",\n        \"tanggalTerbit\": \"1997-06-29\",\n        \"tebalBuku\": 384,\n        \"status\": 0,\n        \"peminjam\": \"-\",\n        \"tanggalPinjam\": \"-\",\n        \"tanggalKembali\": \"-\"\n    }\n]"
+				},
+				{
+					"name": "NOT FOUND",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "null",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/get_all_daftar_buku",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"get_all_daftar_buku"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 14:42:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "NOT FOUND v1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "1",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/get_all_daftar_buku",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"get_all_daftar_buku"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 14:44:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "UPDATE BUKU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\": \"A0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{agitUrl}}/update_book",
+					"host": [
+						"{{local}}{{agitUrl}}"
+					],
+					"path": [
+						"update_book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"status\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/update_book",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"update_book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 14:58:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": \"book update successfully!!\",\n    \"statusCode\": \"OK\",\n    \"statusCodeValue\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE BUKU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\": \"A0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{agitUrl}}/delete_book",
+					"host": [
+						"{{local}}{{agitUrl}}"
+					],
+					"path": [
+						"delete_book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "A0001",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/delete_book",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"delete_book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 16:08:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": \"book delete successfully!!\",\n    \"statusCode\": \"OK\",\n    \"statusCodeValue\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "PINJAM BUKU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"peminjam\": \"Donny\",\r\n    \"tanggalPinjam\": \"17-07-2023\",\r\n    \"tanggalKembali\": \"18-07-2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}{{agitUrl}}/borrow_book",
+					"host": [
+						"{{local}}{{agitUrl}}"
+					],
+					"path": [
+						"borrow_book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"peminjam\": \"Donny\",\r\n    \"tanggalPinjam\": \"17-07-2023\",\r\n    \"tanggalKembali\": \"18-07-2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}{{agitUrl}}/borrow_book",
+							"host": [
+								"{{local}}{{agitUrl}}"
+							],
+							"path": [
+								"borrow_book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jul 2023 15:08:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"headers\": {},\n    \"body\": \"book status update successfully!!\",\n    \"statusCodeValue\": 200,\n    \"statusCode\": \"OK\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "localhost:8080"
+		},
+		{
+			"key": "agitUrl",
+			"value": "/api/technicalTest/agit"
+		}
+	]
+}
