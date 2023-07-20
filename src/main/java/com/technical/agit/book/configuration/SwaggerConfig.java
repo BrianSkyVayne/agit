@@ -38,7 +38,7 @@ public class SwaggerConfig {
 
     private ApiInfo metadata() {
         return new ApiInfoBuilder()
-                .title("JSON Web Token Authentication API")
+                .title("API Peminjaman Buku")
                 .description("simple peminjaman buku")
                 .version("1.0.0")
                 .license("SkyVayne License").licenseUrl("https://www.linkedin.com/in/brian-cahyo-koeswanto-78ab14200/")
